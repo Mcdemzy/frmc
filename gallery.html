@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+
+    <!-- GOOGLE FONTS (MONTSERRAT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="./images/logo-KqJpWCed4-transformed.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SWIPER JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav__container">
+        <a href="index.html"
+          ><img
+            src="./images/logo-KqJpWCed4-transformed.png"
+            class="logo"
+            alt="logo"
+        /></a>
+        <ul class="nav__menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+      </div>
+    </nav>
+    <!-- ========================  END OF NAVBAR =================== -->
+    <h1 style="margin-top: 100px; text-align: center">Our Gallery</h1>
+    <div class="full-img" id="fullImgBox">
+      <img src="images/img1.jpg" id="fullImg" />
+      <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+      <img src="images/img1.jpg" onclick="openfullImg(this.src)" />
+      <img src="images/img2.jpg" onclick="openfullImg(this.src)" />
+      <img src="images/img3.jpg" onclick="openfullImg(this.src)" />
+      <img src="images/img4.jpg" onclick="openfullImg(this.src)" />
+      <img src="images/img5.jpg" onclick="openfullImg(this.src)" />
+      <img src="images/img6.jpg" onclick="openfullImg(this.src)" />
+      <img src="images/img7.jpg" onclick="openfullImg(this.src)" />
+      <img src="images/img8.jpg" onclick="openfullImg(this.src)" />
+    </div>
+    <footer>
+      <div class="container footer__container">
+        <div class="footer__1">
+          <a href="index.html" class="footer__logo"><h4>FRMC</h4></a>
+          <p>
+            Founded in 2020, Fortune Royal has quickly established itself as a
+            trusted provider of certification and management training programs.
+            <!-- The institute's faculty comprises of highly experienced
+            professionals with extensive expertise in their respective fields.
+            They are committed to providing practical training and real-world
+            solutions to the challenges faced by individuals and organizations
+            in today's fast-paced business environment. -->
+          </p>
+        </div>
+
+        <div class="footer__2">
+          <h4>Permalinks</h4>
+          <ul class="permalinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__3">
+          <h4>Privacy</h4>
+          <ul class="privacy">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__4">
+          <h4>Contact Us</h4>
+          <div>
+            <p>0913 545 1448</p>
+            <p>frmc@gmail.com</p>
+          </div>
+
+          <ul class="footer__socials">
+            <li>
+              <a href=""> <i class="uil uil-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href=""> <i class="uil uil-instagram-alt"></i></a>
+            </li>
+            <li>
+              <a href=""> <i class="uil uil-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""> <i class="uil uil-linkedin-alt"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>Copyright &copy; FRCM Youtube </small>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script>
+      var fullImgBox = document.getElementById("fullImgBox");
+      var fullImg = document.getElementById("fullImg");
+
+      function openfullImg(pic) {
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+      }
+      function closeFullImg() {
+        fullImgBox.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
